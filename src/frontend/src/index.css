@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.25rem;
+
+    /* Warm cream palette — converted to OKLCH L C H */
+    /* Background: #F5F1E8 → warm off-white */
+    --background: 0.965 0.012 85;
+    /* Foreground: #1B1B1B → near-black */
+    --foreground: 0.155 0 0;
+
+    /* Card: #FFFFFF */
+    --card: 1 0 0;
+    --card-foreground: 0.155 0 0;
+
+    --popover: 1 0 0;
+    --popover-foreground: 0.155 0 0;
+
+    /* Primary: #2F2F2F charcoal */
+    --primary: 0.24 0 0;
+    --primary-foreground: 0.985 0 0;
+
+    /* Secondary: #F1EEE7 button bg */
+    --secondary: 0.955 0.01 85;
+    --secondary-foreground: 0.24 0 0;
+
+    /* Muted: slightly warm gray */
+    --muted: 0.945 0.008 85;
+    --muted-foreground: 0.45 0 0;
+
+    /* Accent: warm beige */
+    --accent: 0.935 0.018 85;
+    --accent-foreground: 0.24 0 0;
+
+    /* Destructive */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    /* Border: #D9D3C8 */
+    --border: 0.86 0.012 85;
+    --input: 0.86 0.012 85;
+    --ring: 0.45 0 0;
+
+    /* Header/footer bg token */
+    --surface: 0.935 0.018 85;
+
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.965 0.012 85;
+    --sidebar-foreground: 0.155 0 0;
+    --sidebar-primary: 0.24 0 0;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.935 0.018 85;
+    --sidebar-accent-foreground: 0.24 0 0;
+    --sidebar-border: 0.86 0.012 85;
+    --sidebar-ring: 0.45 0 0;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "DM Sans", system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+  .font-body {
+    font-family: "DM Sans", system-ui, sans-serif;
+  }
+  .gallery-card-shadow {
+    box-shadow: 0 1px 4px 0 rgba(27, 27, 27, 0.08), 0 2px 12px 0
+      rgba(27, 27, 27, 0.04);
+  }
+  .gallery-card-shadow:hover {
+    box-shadow: 0 4px 20px 0 rgba(27, 27, 27, 0.12), 0 2px 8px 0
+      rgba(27, 27, 27, 0.06);
+  }
+}
